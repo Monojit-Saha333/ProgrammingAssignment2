@@ -3,11 +3,14 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
+makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) 
+{
+        
         s <- NULL
         set <- function(y) {
                 x <<- y
                 s <<- NULL
+             
         }
   get <- function() x
   setsolve <- function(solve) s <<- solve
@@ -19,7 +22,8 @@ makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
 
 ## Write a short comment describing this function
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x, ...) 
+{
         ## Return a matrix that is the inverse of 'x'
         s <- x$getsolve()
   if(!is.null(s)) {
